@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "name": "Jev decision flow",
+      "entries": [
+        {
+          "path": "src/typesafe_mario/policy.py",
+          "line": 54
+        },
+        {
+          "path": "src/typesafe_mario/policy.py",
+          "line": 112
+        },
+        {
+          "path": "src/typesafe_mario/policy.py",
+          "line": 115
+        },
+        {
+          "path": "src/typesafe_mario/policy.py",
+          "line": 122
+        },
+        {
+          "path": "src/typesafe_mario/runner.py",
+          "line": 225
+        }
+      ]
+    }
+  ]
+}

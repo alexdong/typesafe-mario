@@ -105,6 +105,19 @@ Useful first breakpoints:
 The launch profiles set `justMyCode` to `false`, so **Step Into** can follow calls into
 `typesafe-sdk` and the emulator packages.
 
+### Restore the saved breakpoints
+
+VS Code keeps ordinary breakpoints in machine-local workspace storage. This repository uses
+the recommended Breakpoint Groups extension to keep the `Jev decision flow` group under
+source control instead.
+
+After installing the recommended extensions, open **Run and Debug**, expand **Breakpoint
+Groups**, and find `Jev decision flow`. Choose **Disable group** to restore the five source
+breakpoints in their saved disabled state, or **Enable group** to restore and activate them.
+
+The saved Python exception settings use the debugpy defaults: **Uncaught Exceptions** is
+enabled, while **Raised Exceptions** and **User Uncaught Exceptions** are disabled.
+
 ## Run Mario with Jev
 
 After activating `.venv` and exporting `.env`:
