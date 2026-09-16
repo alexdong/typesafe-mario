@@ -1,0 +1,85 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Trace: state parser demo (no API)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "typesafe_mario.cli",
+      "args": [
+        "state-demo"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Trace: Mario + heuristic (5 decisions)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "typesafe_mario.cli",
+      "args": [
+        "play",
+        "--policy",
+        "heuristic",
+        "--display",
+        "none",
+        "--max-decisions",
+        "5",
+        "--frames-per-decision",
+        "8"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": {
+        "SDL_VIDEODRIVER": "dummy"
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "Trace: Mario + Jev (1 API request)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "typesafe_mario.cli",
+      "args": [
+        "play",
+        "--policy",
+        "typesafe",
+        "--display",
+        "none",
+        "--max-decisions",
+        "1",
+        "--frames-per-decision",
+        "8"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "SDL_VIDEODRIVER": "dummy"
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "Run: Mario + Jev dashboard (50-request cap)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "typesafe_mario.cli",
+      "args": [
+        "play",
+        "--policy",
+        "typesafe",
+        "--display",
+        "dashboard",
+        "--max-decisions",
+        "50",
+        "--frames-per-decision",
+        "8"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "justMyCode": false
+    }
+  ]
+}
